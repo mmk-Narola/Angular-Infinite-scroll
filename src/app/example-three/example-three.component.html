@@ -1,0 +1,30 @@
+<div class="page-content">
+    <div class="container">
+        <h4>ExampleThree</h4>
+
+        <div infinite-scroll [infiniteScrollDistance]="1" [infiniteScrollThrottle]="1000" (scrolled)="onScroll()">
+            <mat-card *ngFor="let cat of cats">
+                <mat-card-header>
+                    <div>
+                        <mat-card-title>{{ cat.name }}</mat-card-title>
+                        <mat-card-subtitle>Temperament: {{ cat.temperament }}</mat-card-subtitle>
+                    </div>
+                </mat-card-header>
+                <mat-card-content>
+                    <div class="img-container">
+                        <img *ngIf="cat.image" [src]="cat.image.url" width="100" height="100">
+                    </div>
+                    <div>
+                        <span>{{ cat.description }}</span>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+
+
+            <div class="d-flex justify-content-center">
+                <div class="spinner-border text-primary" role="status" *ngIf="isLoading">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        </div>
+    </div>

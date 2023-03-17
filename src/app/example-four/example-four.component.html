@@ -1,0 +1,17 @@
+<div class="page-content">
+    <div class="container">
+        <h4>ExampleFour</h4>
+
+        <div class="items">
+            <div *ngFor="let item of items$ | async">
+                <b>ID: </b> {{item.id}}<br>
+                <b>Title: </b>{{item.title}}<br>
+                <img src="{{item.thumbnailUrl}}" alt="">
+                <br>
+                <br>
+                <br>
+            </div>
+        </div>
+
+    </div>
+</div>

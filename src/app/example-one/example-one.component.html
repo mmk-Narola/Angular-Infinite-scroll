@@ -1,0 +1,16 @@
+<div class="page-content">
+    <div class="container">
+        <h4>Example One </h4>
+
+        <cdk-virtual-scroll-viewport itemSize="100" class="example-viewport">
+            <div *cdkVirtualFor="let item of arrNumber">
+                <h5 class="animate__animated animate__slideOutLeft">
+                    {{item}}
+                </h5>
+            </div>
+        </cdk-virtual-scroll-viewport>
+
+        <!-- <h2 class="animate__animated animate__slideOutRight">Hello World!...</h2> -->
+
+    </div>
+</div>
